@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: usermanagement
+  cloud:
+    config:
+      enabled: false
+  datasource:
+    url: jdbc:mysql://172.17.0.2:3306/usermanagement
+    username: root
+    password: password
+    testWhileIdle: true
+    validationQuery: SELECT 1
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+
+eureka:
+  client:
+    serviceUrl:
+      # for Docker Container
+      #defaultZone: http://eureka:8761/eureka/
+      # for local usage
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    statusPageUrlPath: /info
+    healthCheckUrlPath: /health
+
+server:
+  port: 9090
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+
+turbine:
+  aggregator:
+    clusterConfig: SAMPLE-HYSTRIX-AGGREGATE
+    appConfig: SAMPLE-HYSTRIX-AGGREGATE
