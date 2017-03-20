@@ -36,7 +36,7 @@ public class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdap
     public JwtAccessTokenConverter jwtAccessTokenConverter() {
         JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
         KeyPair keyPair = new KeyStoreKeyFactory(new ClassPathResource("keystore.jks"),
-                "password".toCharArray()).getKeyPair("selfsigned");
+            "password".toCharArray()).getKeyPair("selfsigned");
         converter.setKeyPair(keyPair);
         return converter;
     }
@@ -52,15 +52,15 @@ public class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdap
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer authorizationServerEndpointsConfigurer)
-            throws Exception {
+        throws Exception {
         authorizationServerEndpointsConfigurer.authenticationManager(basicAuthenticationManager).accessTokenConverter(
-                jwtAccessTokenConverter());
+            jwtAccessTokenConverter());
     }
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer authorizationServerSecurityConfigurer)
-            throws Exception {
+        throws Exception {
         authorizationServerSecurityConfigurer.tokenKeyAccess("permitAll()").checkTokenAccess(
-                "isAuthenticated()");
+            "isAuthenticated()");
     }
 }

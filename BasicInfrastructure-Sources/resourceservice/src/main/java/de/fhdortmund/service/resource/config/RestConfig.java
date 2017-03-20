@@ -10,8 +10,8 @@ import org.springframework.security.oauth2.client.OAuth2RestTemplate;
  */
 @Configuration
 public class RestConfig {
-        @Bean
-        public OAuth2RestTemplate restTemplate(UserInfoRestTemplateFactory userInfoRestTemplateFactory) {
-            return userInfoRestTemplateFactory.getUserInfoRestTemplate();
-        }
+    @Bean
+    public OAuth2RestTemplate restTemplate(UserInfoRestTemplateFactory userInfoRestTemplateFactory) {
+        return userInfoRestTemplateFactory.getUserInfoRestTemplate();
+    }
 }

@@ -31,7 +31,8 @@ public class UserManagementController {
      */
     @RequestMapping("/register")
     @ResponseBody
-    public String register(Principal principal, String email, String surName, String firstName, String username, String password) {
+    public String register(Principal principal, String email, String surName, String firstName, String username,
+        String password) {
         System.out.println(principal.getName());
 
         if (!email.contains("@")) {

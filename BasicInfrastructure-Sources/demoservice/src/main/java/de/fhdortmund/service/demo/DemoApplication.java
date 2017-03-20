@@ -18,9 +18,8 @@ import java.security.Principal;
 @EnableResourceServer
 @EnableEurekaClient
 public class DemoApplication {
-
     @RequestMapping("/")
-    public String home ( Principal principal) {
+    public String home( Principal principal) {
         String greeting = "Hello ";
         return greeting + principal.getName();
     }

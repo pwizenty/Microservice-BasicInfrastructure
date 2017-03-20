@@ -13,13 +13,12 @@ import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 /**
  * Created by phil on 12.01.17.
  */
-    @SpringBootApplication
+@SpringBootApplication
 @EnableZuulProxy
 @EnableOAuth2Sso
 @EnableDiscoveryClient
 @EnableEurekaClient
 public class GatewayApplication extends WebSecurityConfigurerAdapter {
-
     public static void main(String[] args) {
         SpringApplication.run(GatewayApplication.class, args);
     }
@@ -29,7 +28,8 @@ public class GatewayApplication extends WebSecurityConfigurerAdapter {
         httpSecurity
                 .logout().and()
                 .authorizeRequests()
-                .antMatchers("/index.html", "/home.html", "/", "/login", "/usermanagement", "/demo-resources").permitAll()
+                .antMatchers("/index.html", "/home.html", "/", "/login", "/usermanagement",
+                        "/demo-resources").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .csrf()
