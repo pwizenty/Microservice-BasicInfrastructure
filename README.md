@@ -11,14 +11,14 @@ Systems. Following this goal, the individual components of the repository were d
 
 <h2>Repository Components
 <h3>BasicInfrastructure-Archetype</h3>
-<p></p>
+<p>This component contains the microservice basic infrastructure Archetype. This Includes all components from the sources and the configuration files needed for the archetype.</p>
  
 <h3>BasicInfrastructure-Sources</h3>
-<p></p>
+<p>This component contains the source code, which the Maven Archetype is based on.</p>
   
 <h3>Service-Archetype</h3>
-<p></p>
+<p>The Service-Archetype contains the Basic structure for creating new Microservices.</p>
 
-<h3>MAGAMA-Tool</h3>
-<p></p>
+<h3>MAGMA-Tool</h3>
+<p>The MAGMA-Tool should visualize the generation prozess for the diffrent archtype.</p>
      
