@@ -5,7 +5,7 @@ spring:
     config:
       enabled: false
   datasource:
-    url: jdbc:mysql://172.17.0.2:3306/usermanagement
+    url: jdbc:mysql://localhost:3306/usermanagement
     username: root
     password: password
     testWhileIdle: true

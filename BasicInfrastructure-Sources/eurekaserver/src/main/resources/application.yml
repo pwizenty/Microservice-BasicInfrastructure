@@ -14,9 +14,3 @@ eureka:
 spring:
   application:
     name: eureka-server
-  cloud:
-      config:
-        enabled: true
-        discovery:
-          enabled: true
-          serviceId: SAMPLE-HYSTRIX-CONFIG
