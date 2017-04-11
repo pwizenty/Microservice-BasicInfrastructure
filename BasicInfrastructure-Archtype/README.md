@@ -1,6 +1,6 @@
 <h1>BasicInfrastructure-Archetype</h1>
 
-This component contains the archtype sources which are used to install the Maven archetype into your local Maven repository. It was create from the BasicInfrastrcutre-Sources.
+This component contains the archtype sources which are used to install the Maven archetype into your local Maven repository. It was create from the BasicInfrastructure-Sources.
 
 <h2>Getting Started</h2>
 
