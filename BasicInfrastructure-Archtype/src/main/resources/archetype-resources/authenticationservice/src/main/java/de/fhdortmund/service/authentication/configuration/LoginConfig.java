@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 package de.fhdortmund.service.authentication.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;

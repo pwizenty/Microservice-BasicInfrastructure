@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 package de.fhdortmund.service.resource.services;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
@@ -20,32 +17,24 @@ public class UserService {
     @LoadBalanced
     private  RestTemplate restTemplate;
 
-    public UserService(RestTemplate template) {
-        this.restTemplate = template;
+    public UserService(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
     }
 
     /**
-     * This Methodes consumes a rest endpoint from the usermanagement service
+     * This methode consumes a rest endpoint from the usermanagement service
      *
      * @param username username of the logged in user.
      * @return full user information
      */
-    @HystrixCommand(fallbackMethod = "reliable")
+
     public User getUserByUsername(String username) {
         URI uri = URI.create("http://localhost:9090/get-by-username?username=" + username );
-        System.out.println("RESTFALL");
         User user = restTemplate.getForObject(uri, User.class);
-        if( user == null) {
-            System.out.println("User is null");
-        } else {
-            System.out.println("Username:" + user.getUsername());
-        }
-
-        return this.restTemplate.getForObject(uri, User.class);
+        return user;
     }
 
-
     public User reliable(String username) {
-        return new User("Email", "Surname","Firstname", "username", "password");
+        return new User("Email", "Surname", "Firstname", "username", "password");
     }
 }

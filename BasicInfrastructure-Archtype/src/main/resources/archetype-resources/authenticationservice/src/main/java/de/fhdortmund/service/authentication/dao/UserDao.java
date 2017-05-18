@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 package de.fhdortmund.service.authentication.dao;
 
 import org.springframework.data.repository.CrudRepository;

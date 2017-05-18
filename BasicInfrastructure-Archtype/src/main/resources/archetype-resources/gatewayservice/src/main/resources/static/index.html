@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 <!doctype html>
 <html>
     <head>
@@ -9,7 +6,7 @@
         <link   href="css/angular-bootstrap.css"
                 rel="stylesheet">
         <style type="text/css">
-            [ng${symbol_escape}:cloak], [ng-cloak], .ng-cloak {
+            [ng\:cloak], [ng-cloak], .ng-cloak {
                 display: none !important;
             }
         </style>
@@ -18,7 +15,7 @@
     <body ng-app="hello" ng-cloak class="ng-cloak">
         <div ng-controller="navigation as nav" class="container">
             <ul class="nav nav-pills" role="tablist">
-                <li ng-class="{active:nav.tab('home')}"><a href="${symbol_pound}/">home</a></li>
+                <li ng-class="{active:nav.tab('home')}"><a href="#/">home</a></li>
                 <li ng-class="{active:nav.tab('navigation')}"><a href="login">login</a></li>
                 <li ng-show="authenticated"><a href="" ng-click="nav.logout()">logout</a></li>
             </ul>

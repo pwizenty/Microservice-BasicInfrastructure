@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 package de.fhdortmund.server.eureka;
 
 import org.springframework.boot.SpringApplication;

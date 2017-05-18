@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 package de.fhdortmund.service.usermanagement.controller;
 
 import com.netflix.discovery.EurekaClient;
@@ -34,7 +31,8 @@ public class UserManagementController {
      */
     @RequestMapping("/register")
     @ResponseBody
-    public String register(Principal principal, String email, String surName, String firstName, String username, String password) {
+    public String register(Principal principal, String email, String surName, String firstName, String username,
+        String password) {
         System.out.println(principal.getName());
 
         if (!email.contains("@")) {

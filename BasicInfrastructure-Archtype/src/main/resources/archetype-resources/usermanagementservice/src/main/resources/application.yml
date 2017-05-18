@@ -1,3 +1,6 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 spring:
   application:
     name: usermanagement
@@ -5,7 +8,7 @@ spring:
     config:
       enabled: false
   datasource:
-    url: jdbc:mysql://172.17.0.2:3306/usermanagement
+    url: jdbc:mysql://localhost:3306/usermanagement
     username: root
     password: password
     testWhileIdle: true
@@ -34,7 +37,6 @@ server:
     enabled: true
     mime-types: application/json,application/xml,text/html,text/xml,text/plain
 
-turbine:
-  aggregator:
-    clusterConfig: SAMPLE-HYSTRIX-AGGREGATE
-    appConfig: SAMPLE-HYSTRIX-AGGREGATE
+security:
+  user:
+    password: none

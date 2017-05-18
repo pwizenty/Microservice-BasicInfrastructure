@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.PathResource;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
@@ -38,13 +39,14 @@ public class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdap
     @Bean
     public JwtAccessTokenConverter jwtAccessTokenConverter() {
         JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
-        KeyPair keyPair = new KeyStoreKeyFactory(new ClassPathResource("keystore.jks"),
-                "foobar".toCharArray()).getKeyPair("test");
+        KeyPair keyPair = new KeyStoreKeyFactory(
+                new PathResource("${CertPath}"),
+                "${CertPassword}".toCharArray()).getKeyPair("${CertKeyPair}");
         converter.setKeyPair(keyPair);
         return converter;
     }
 
-    @Override
+        @Override
     public void configure(ClientDetailsServiceConfigurer clientDetailsServiceConfigurer) throws Exception {
         clientDetailsServiceConfigurer.inMemory()
                 .withClient("client")
@@ -55,15 +57,15 @@ public class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdap
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer authorizationServerEndpointsConfigurer)
-            throws Exception {
+        throws Exception {
         authorizationServerEndpointsConfigurer.authenticationManager(basicAuthenticationManager).accessTokenConverter(
-                jwtAccessTokenConverter());
+            jwtAccessTokenConverter());
     }
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer authorizationServerSecurityConfigurer)
-            throws Exception {
+        throws Exception {
         authorizationServerSecurityConfigurer.tokenKeyAccess("permitAll()").checkTokenAccess(
-                "isAuthenticated()");
+            "isAuthenticated()");
     }
 }

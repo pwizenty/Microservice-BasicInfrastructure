@@ -16,6 +16,7 @@
         <module>resourceservice</module>
         <module>authenticationservice</module>
         <module>demoservice</module>
+        <module>turbineserver</module>
     </modules>
 
     <parent>

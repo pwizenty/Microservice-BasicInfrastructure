@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.PathResource;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
@@ -35,13 +36,15 @@ public class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdap
     @Bean
     public JwtAccessTokenConverter jwtAccessTokenConverter() {
         JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
-        KeyPair keyPair = new KeyStoreKeyFactory(new ClassPathResource("keystore.jks"),
-            "password".toCharArray()).getKeyPair("selfsigned");
+        KeyPair keyPair = new KeyStoreKeyFactory(
+                new PathResource("/home/phil/Dropbox/Fachhochschule/Bachlorarbeit/Microservice-BasicInfrastructure/" +
+                        "BasicInfrastructure-Sources/authenticationservice/src/main/resources/keystore.jks"),
+                "password".toCharArray()).getKeyPair("selfsigned");
         converter.setKeyPair(keyPair);
         return converter;
     }
 
-    @Override
+        @Override
     public void configure(ClientDetailsServiceConfigurer clientDetailsServiceConfigurer) throws Exception {
         clientDetailsServiceConfigurer.inMemory()
                 .withClient("client")
