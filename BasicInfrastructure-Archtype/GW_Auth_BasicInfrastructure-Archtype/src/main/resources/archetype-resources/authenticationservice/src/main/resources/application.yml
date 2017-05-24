@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: authentication-server
+  cloud:
+    config:
+      enabled: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/usermanagement
+    username: root
+    password: password
+    testWhileIdle: true
+    validationQuery: SELECT 1
+  jpa:
+    show-sql: true
+
+server:
+  port: 9999
+  contextPath: /uaa
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+
+security:
+  user:
+    password: password
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+
+

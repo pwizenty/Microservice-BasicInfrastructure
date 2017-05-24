@@ -1,0 +1,37 @@
+debug: true
+server:
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+
+spring:
+  aop:
+    proxy-target-class: true
+  application:
+    name: UI-Service
+  cloud:
+    config:
+      enabled: false
+
+security:
+  user:
+    password: none
+  oauth2:
+    client:
+      accessTokenUri: http://localhost:9999/uaa/oauth/token
+      userAuthorizationUri: http://localhost:9999/uaa/oauth/authorize
+      clientId: client
+      clientSecret: password
+
+zuul:
+  routes:
+    resource:
+      path: /resource/**
+      url: http://localhost:9000/resource
+    user:
+      path: /user/**
+      url: http://localhost:9999/uaa/user
+
+logging:
+  level:
+    org.springframework.security: DEBUG
