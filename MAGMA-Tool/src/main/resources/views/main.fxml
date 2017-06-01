@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.fhdortmund.seelab.Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="388.0" minWidth="10.0" prefWidth="388.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="302.0" minWidth="10.0" prefWidth="274.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="111.0" minHeight="10.0" prefHeight="111.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="221.0" minHeight="10.0" prefHeight="190.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+         <children>
+            <FlowPane maxWidth="1.7976931348623157E308">
+               <children>
+                  <Label prefWidth="60.0" text="GroupId: " />
+                  <TextField fx:id="txtGroupId" maxWidth="1.7976931348623157E308" minWidth="10.0" prefHeight="27.0" prefWidth="318.0" />
+               </children>
+            </FlowPane>
+             <FlowPane maxWidth="1.7976931348623157E308">
+                 <children>
+                     <Label prefHeight="17.0" prefWidth="60.0" text="artifactId:" />
+                     <TextField fx:id="txtartifactId" maxWidth="1.7976931348623157E308" minWidth="10.0" prefHeight="27.0" prefWidth="318.0" />
+                 </children>
+             </FlowPane>
+             <FlowPane maxWidth="1.7976931348623157E308">
+                 <children>
+                     <Label prefHeight="17.0" prefWidth="60.0" text="package:" />
+                     <TextField fx:id="txtPackage" maxWidth="1.7976931348623157E308" minWidth="10.0" prefHeight="27.0" prefWidth="318.0" />
+                 </children>
+             </FlowPane>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.rowIndex="1">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Certificate Information" textAlignment="CENTER" />
+            <FlowPane maxWidth="1.7976931348623157E308">
+               <children>
+                  <Label prefWidth="100.0" text="Cert Path:" />
+                  <TextField fx:id="txtCertPath" maxWidth="1.7976931348623157E308" minWidth="10.0" prefHeight="27.0" prefWidth="278.0" />
+               </children>
+            </FlowPane>
+            <FlowPane layoutX="10.0" layoutY="27.0" maxWidth="1.7976931348623157E308">
+               <children>
+                  <Label prefWidth="100.0" text="Cert Password: " />
+                  <TextField fx:id="txtCertPassword" maxWidth="1.7976931348623157E308" minWidth="10.0" prefHeight="27.0" prefWidth="278.0" />
+               </children>
+            </FlowPane>
+            <FlowPane layoutX="10.0" layoutY="54.0" maxWidth="1.7976931348623157E308">
+               <children>
+                  <Label prefWidth="100.0" text="Cert KeyPair:" />
+                  <TextField fx:id="txtKeyPair" maxWidth="1.7976931348623157E308" minWidth="10.0" prefHeight="27.0" prefWidth="278.0" />
+               </children>
+            </FlowPane>
+            <FlowPane layoutX="10.0" layoutY="81.0" maxWidth="1.7976931348623157E308">
+               <children>
+                  <Label prefWidth="100.0" text="Cert PublicKey:" />
+                  <TextArea fx:id="txtPublicKey" maxWidth="1.7976931348623157E308" minWidth="10.0" prefHeight="64.0" prefWidth="278.0" wrapText="true" />
+               </children>
+            </FlowPane>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.rowIndex="2">
+           <children>
+               <Label alignment="CENTER" contentDisplay="CENTER" text="General Information" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Label>
+               <FlowPane maxWidth="1.7976931348623157E308">
+                   <children>
+                       <Label prefWidth="110.0" text="Installation Path:" />
+                       <TextField fx:id="txtInstallationPath" maxWidth="1.7976931348623157E308" minWidth="10.0" prefHeight="27.0" prefWidth="268.0" />
+                   </children>
+               </FlowPane>
+           </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+       </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="1">
+         <children>
+            <CheckBox fx:id="checkAuth" mnemonicParsing="false" text="API Gateway- and AuthenticationService" />
+            <CheckBox fx:id="checkDiscovery" layoutX="15.0" layoutY="15.0" mnemonicParsing="false" text="Service Discovery" />
+            <CheckBox fx:id="checkUsermanagement" layoutX="15.0" layoutY="33.0" mnemonicParsing="false" text="UsermanagementService" />
+            <CheckBox fx:id="checkResource" layoutX="15.0" layoutY="71.0" mnemonicParsing="false" text="ResourceService" />
+         </children>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="BOTTOM_RIGHT" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <Button alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#build" text="Build">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding></Button>
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin></VBox>
+      <ImageView fx:id="imgDiagram" fitHeight="189.0" fitWidth="302.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+   </children>
+</GridPane>
