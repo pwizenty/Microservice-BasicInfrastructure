@@ -18,6 +18,7 @@ public class MainFrame extends Application {
         Scene scene = new Scene(root, 700, 450);
         stage.setTitle("MAGMA-Tool");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 
