@@ -92,7 +92,7 @@ public class Controller {
         });
         checkResource.selectedProperty().addListener((ov, o, n) -> {
             if(!n) {
-                Image img = new Image(getClass().getClassLoader().getResourceAsStream("AuthEurekaGWAndUM.png"));
+                Image img = new Image(getClass().getClassLoader().getResourceAsStream("images/AuthEurekaGWAndUM.png"));
                 imgDiagram.setImage(img);
             } else {
 
