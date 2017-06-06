@@ -28,6 +28,8 @@ public class Controller {
     @FXML
     private CheckBox checkResource;
     @FXML
+    private CheckBox checkServiceTemplate;
+    @FXML
     private TextField txtGroupId;
     @FXML
     private TextField txtartifactId;
@@ -62,35 +64,35 @@ public class Controller {
                 checkDiscovery.setSelected(false);
                 imgDiagram.setImage(null);
             } else {
-                Image img = new Image(getClass().getClassLoader().getResourceAsStream("images/AuthComponents.png"));
+                Image img = new Image(getClass().getClassLoader().getResourceAsStream("images/AuthAndGW.png"));
                 imgDiagram.setImage(img);
             }
         });
         checkDiscovery.selectedProperty().addListener((ov, o, n) -> {
             if(!n) {
                 checkUsermanagement.setSelected(false);
-                Image img = new Image(getClass().getClassLoader().getResourceAsStream("images/AuthComponents.png"));
+                Image img = new Image(getClass().getClassLoader().getResourceAsStream("images/AuthAndGW.png"));
                 imgDiagram.setImage(img);
             } else {
                 checkAuth.setSelected(true);
-                Image img = new Image(getClass().getClassLoader().getResourceAsStream("images/AuthAndEurekaComponents.png"));
+                Image img = new Image(getClass().getClassLoader().getResourceAsStream("images/AuthGWAndEureka.png"));
                 imgDiagram.setImage(img);
             }
         });
         checkUsermanagement.selectedProperty().addListener((ov, o, n) -> {
             if(!n) {
                checkResource.setSelected(false);
-                Image img = new Image(getClass().getClassLoader().getResourceAsStream("images/AuthAndEurekaComponents.png"));
+                Image img = new Image(getClass().getClassLoader().getResourceAsStream("images/AuthGWAndEureka.png"));
                 imgDiagram.setImage(img);
             } else {
                 checkDiscovery.setSelected(true);
-                Image img = new Image(getClass().getClassLoader().getResourceAsStream("images/AllComponents.png"));
+                Image img = new Image(getClass().getClassLoader().getResourceAsStream("images/AuthEurekaGWAndUM.png"));
                 imgDiagram.setImage(img);
             }
         });
         checkResource.selectedProperty().addListener((ov, o, n) -> {
             if(!n) {
-                Image img = new Image(getClass().getClassLoader().getResourceAsStream("images/AllComponents.png"));
+                Image img = new Image(getClass().getClassLoader().getResourceAsStream("AuthEurekaGWAndUM.png"));
                 imgDiagram.setImage(img);
             } else {
 
@@ -99,6 +101,17 @@ public class Controller {
                 imgDiagram.setImage(img);
             }
         });
+
+        checkServiceTemplate.selectedProperty().addListener((ov, o, n) -> {
+            checkAuth.setDisable(n);
+            checkDiscovery.setDisable(n);
+            checkUsermanagement.setDisable(n);
+            checkResource.setDisable(n);
+            txtCertPassword.setDisable(n);
+            txtCertPath.setDisable(n);
+            txtKeyPair.setDisable(n);
+        });
+
 
     }
 
@@ -114,30 +127,37 @@ public class Controller {
         properties.setProperty("groupId", txtGroupId.getText());
         properties.setProperty("artifactId", txtartifactId.getText());
         properties.setProperty("version", "1");
-        properties.setProperty("CertKeyPair", txtKeyPair.getText());
         properties.setProperty("archetypeGroupId", "Infrastruktur");
-        properties.setProperty("CertPassword", txtCertPassword.getText());
         properties.setProperty("CertPublicKey", txtPublicKey.getText());
-        properties.setProperty("CertPath", txtCertPath.getText());
         properties.setProperty("package", txtPackage.getText());
 
-        //Select archetype
         String archetype;
-        if(checkResource.isSelected()) {
-            archetype = "Basiskomponenten-archetype";
-        } else if (checkUsermanagement.isSelected()) {
-           archetype = "GW_Auth_SD_UM-BasicInfrastructure-Archtype";
-        } else if(checkDiscovery.isSelected()) {
-            archetype = "GW_Auth_SD_BasicInfrastructure-Archtype";
-        } else if(checkAuth.isSelected()) {
-            archetype = "GW_Auth-Infrastructure-archetype";
-        } else {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Build failed");
-            alert.setHeaderText("No components selected");
-            alert.setContentText("You need to select at least one component to genereate the infrastructure.");
-            alert.showAndWait();
-            return;
+
+        if(checkServiceTemplate.isSelected()) {
+            archetype = "Service-Archetype";
+        }else {
+
+            properties.setProperty("CertKeyPair", txtKeyPair.getText());
+            properties.setProperty("CertPassword", txtCertPassword.getText());
+            properties.setProperty("CertPath", txtCertPath.getText());
+
+            //Select archetype
+            if (checkResource.isSelected()) {
+                archetype = "Basiskomponenten-archetype";
+            } else if (checkUsermanagement.isSelected()) {
+                archetype = "GW_Auth_SD_UM-BasicInfrastructure-Archtype";
+            } else if (checkDiscovery.isSelected()) {
+                archetype = "GW_Auth_SD_BasicInfrastructure-Archtype";
+            } else if (checkAuth.isSelected()) {
+                archetype = "GW_Auth-Infrastructure-archetype";
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Build failed");
+                alert.setHeaderText("No components selected");
+                alert.setContentText("You need to select at least one component to genereate the infrastructure.");
+                alert.showAndWait();
+                return;
+            }
         }
 
         System.out.println(archetype);

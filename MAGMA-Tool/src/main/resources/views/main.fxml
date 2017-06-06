@@ -13,15 +13,15 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.fhdortmund.seelab.Controller">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.fhdortmund.seelab.Controller">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="388.0" minWidth="10.0" prefWidth="388.0" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="302.0" minWidth="10.0" prefWidth="274.0" />
   </columnConstraints>
   <rowConstraints>
-    <RowConstraints maxHeight="111.0" minHeight="10.0" prefHeight="111.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="221.0" minHeight="10.0" prefHeight="190.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="172.0" minHeight="10.0" prefHeight="158.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="221.0" minHeight="10.0" prefHeight="157.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
       <VBox maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
@@ -107,6 +107,7 @@
             <CheckBox fx:id="checkDiscovery" layoutX="15.0" layoutY="15.0" mnemonicParsing="false" text="Service Discovery" />
             <CheckBox fx:id="checkUsermanagement" layoutX="15.0" layoutY="33.0" mnemonicParsing="false" text="UsermanagementService" />
             <CheckBox fx:id="checkResource" layoutX="15.0" layoutY="71.0" mnemonicParsing="false" text="ResourceService" />
+             <CheckBox fx:id="checkServiceTemplate" layoutX="15.0" layoutY="71.0" mnemonicParsing="false" text="Service Template" />
          </children>
          <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

@@ -15,7 +15,7 @@ public class MainFrame extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("views/main.fxml"));
 
-        Scene scene = new Scene(root, 700, 400);
+        Scene scene = new Scene(root, 700, 450);
         stage.setTitle("MAGMA-Tool");
         stage.setScene(scene);
         stage.show();
