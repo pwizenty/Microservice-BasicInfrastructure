@@ -24,12 +24,13 @@
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="302.0" minWidth="10.0" prefWidth="274.0" />
   </columnConstraints>
   <rowConstraints>
-    <RowConstraints maxHeight="172.0" minHeight="10.0" prefHeight="158.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="221.0" minHeight="10.0" prefHeight="157.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="172.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="220.0" minHeight="10.0" prefHeight="156.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="221.0" minHeight="10.0" prefHeight="194.0" vgrow="SOMETIMES" />
     <RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <VBox maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+      <VBox maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.rowIndex="1">
          <children>
             <FlowPane maxWidth="1.7976931348623157E308">
                <children>
@@ -39,13 +40,13 @@
             </FlowPane>
              <FlowPane maxWidth="1.7976931348623157E308">
                  <children>
-                     <Label prefHeight="17.0" prefWidth="75.0" text="artifactId:" />
+                     <Label prefHeight="17.0" prefWidth="75.0" text="ArtifactId:" />
                      <TextField fx:id="txtartifactId" maxWidth="1.7976931348623157E308" minWidth="10.0" prefHeight="27.0" prefWidth="302.0" />
                  </children>
              </FlowPane>
              <FlowPane maxWidth="1.7976931348623157E308">
                  <children>
-                     <Label prefHeight="17.0" prefWidth="75.0" text="package:" />
+                     <Label prefHeight="17.0" prefWidth="75.0" text="Package:" />
                      <TextField fx:id="txtPackage" maxWidth="1.7976931348623157E308" minWidth="10.0" prefHeight="27.0" prefWidth="302.0" />
                  </children>
              </FlowPane>
@@ -57,7 +58,7 @@
             <Insets />
          </opaqueInsets>
       </VBox>
-      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.rowIndex="1">
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.rowIndex="2">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" text="Certificate Information" textAlignment="CENTER" />
             <FlowPane maxWidth="1.7976931348623157E308">
@@ -89,7 +90,7 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
       </VBox>
-       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.rowIndex="2">
+       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.rowIndex="3">
            <children>
                <Label alignment="CENTER" contentDisplay="CENTER" text="General Information" textAlignment="CENTER">
                <VBox.margin>
@@ -106,7 +107,7 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
        </VBox>
-      <VBox prefHeight="162.0" prefWidth="260.0" spacing="10.0" GridPane.columnIndex="1">
+      <VBox prefHeight="162.0" prefWidth="260.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <children>
             <CheckBox fx:id="checkAuth" mnemonicParsing="false" text="Gateway- and AuthenticationService" />
             <CheckBox fx:id="checkDiscovery" layoutX="15.0" layoutY="15.0" mnemonicParsing="false" text="Service Discovery" />
@@ -121,7 +122,7 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
       </VBox>
-      <VBox alignment="BOTTOM_RIGHT" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+      <VBox alignment="BOTTOM_RIGHT" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <children>
             <Button alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#build" text="Build">
                <VBox.margin>
@@ -137,7 +138,9 @@
          <GridPane.margin>
             <Insets />
          </GridPane.margin></VBox>
-      <ImageView fx:id="imgDiagram" fitHeight="189.0" fitWidth="302.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <ImageView fx:id="imgDiagram" fitHeight="189.0" fitWidth="302.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="15.0" prefWidth="391.0" text="Maven Information" />
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="15.0" prefWidth="300.0" text="MSA Components" GridPane.columnIndex="1" />
 
    </children>
 </GridPane>

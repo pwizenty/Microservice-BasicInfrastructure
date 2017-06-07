@@ -15,7 +15,7 @@ public class MainFrame extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("views/main.fxml"));
 
-        Scene scene = new Scene(root, 750, 450);
+        Scene scene = new Scene(root, 680, 450);
         stage.setTitle("MAGMA-Tool");
         setUserAgentStylesheet(STYLESHEET_CASPIAN);
         stage.setResizable(true);
