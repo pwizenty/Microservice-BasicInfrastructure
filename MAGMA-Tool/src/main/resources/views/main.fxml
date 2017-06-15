@@ -1,22 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.FlowPane?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
 
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.fhdortmund.seelab.Controller">
   <columnConstraints>
@@ -34,13 +21,13 @@
          <children>
             <FlowPane maxWidth="1.7976931348623157E308">
                <children>
-                  <Label prefHeight="15.0" prefWidth="75.0" text="GroupId: " />
+                  <Label prefHeight="15.0" prefWidth="75.0" text="Group ID: " />
                   <TextField fx:id="txtGroupId" maxWidth="1.7976931348623157E308" minWidth="10.0" prefHeight="27.0" prefWidth="302.0" />
                </children>
             </FlowPane>
              <FlowPane maxWidth="1.7976931348623157E308">
                  <children>
-                     <Label prefHeight="17.0" prefWidth="75.0" text="ArtifactId:" />
+                     <Label prefHeight="17.0" prefWidth="75.0" text="Artifact ID:" />
                      <TextField fx:id="txtartifactId" maxWidth="1.7976931348623157E308" minWidth="10.0" prefHeight="27.0" prefWidth="302.0" />
                  </children>
              </FlowPane>
@@ -63,26 +50,26 @@
             <Label alignment="CENTER" contentDisplay="CENTER" text="Certificate Information" textAlignment="CENTER" />
             <FlowPane maxWidth="1.7976931348623157E308">
                <children>
-                  <Label prefHeight="15.0" prefWidth="105.0" text="Cert Path:" />
+                  <Label prefHeight="15.0" prefWidth="105.0" text="Path:" />
                   <TextField fx:id="txtCertPath" maxWidth="1.7976931348623157E308" minWidth="10.0" prefHeight="27.0" prefWidth="270.0" />
                </children>
             </FlowPane>
+             <FlowPane layoutX="10.0" layoutY="81.0" maxWidth="1.7976931348623157E308">
+                 <children>
+                     <Label prefHeight="15.0" prefWidth="105.0" text="Public Key:" />
+                     <TextArea fx:id="txtPublicKey" maxWidth="1.7976931348623157E308" minWidth="10.0" prefHeight="64.0" prefWidth="270.0" wrapText="true" />
+                 </children>
+             </FlowPane>
+             <FlowPane layoutX="10.0" layoutY="54.0" maxWidth="1.7976931348623157E308">
+                 <children>
+                     <Label prefHeight="15.0" prefWidth="105.0" text="Key Pair:" />
+                     <TextField fx:id="txtKeyPair" maxWidth="1.7976931348623157E308" minWidth="10.0" prefHeight="27.0" prefWidth="270.0" />
+                 </children>
+             </FlowPane>
             <FlowPane layoutX="10.0" layoutY="27.0" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="367.0">
                <children>
-                  <Label prefHeight="15.0" prefWidth="105.0" text="Cert Password: " />
+                  <Label prefHeight="15.0" prefWidth="105.0" text="Password: " />
                   <TextField fx:id="txtCertPassword" maxWidth="1.7976931348623157E308" minWidth="10.0" prefHeight="27.0" prefWidth="270.0" />
-               </children>
-            </FlowPane>
-            <FlowPane layoutX="10.0" layoutY="54.0" maxWidth="1.7976931348623157E308">
-               <children>
-                  <Label prefHeight="15.0" prefWidth="105.0" text="Cert KeyPair:" />
-                  <TextField fx:id="txtKeyPair" maxWidth="1.7976931348623157E308" minWidth="10.0" prefHeight="27.0" prefWidth="270.0" />
-               </children>
-            </FlowPane>
-            <FlowPane layoutX="10.0" layoutY="81.0" maxWidth="1.7976931348623157E308">
-               <children>
-                  <Label prefHeight="15.0" prefWidth="105.0" text="Cert PublicKey:" />
-                  <TextArea fx:id="txtPublicKey" maxWidth="1.7976931348623157E308" minWidth="10.0" prefHeight="64.0" prefWidth="270.0" wrapText="true" />
                </children>
             </FlowPane>
          </children>
@@ -109,10 +96,10 @@
        </VBox>
       <VBox prefHeight="162.0" prefWidth="260.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <children>
-            <CheckBox fx:id="checkAuth" mnemonicParsing="false" text="Gateway- and AuthenticationService" />
-            <CheckBox fx:id="checkDiscovery" layoutX="15.0" layoutY="15.0" mnemonicParsing="false" text="Service Discovery" />
-            <CheckBox fx:id="checkUsermanagement" layoutX="15.0" layoutY="33.0" mnemonicParsing="false" text="UsermanagementService" />
-            <CheckBox fx:id="checkResource" layoutX="15.0" layoutY="71.0" mnemonicParsing="false" text="ResourceService" />
+             <CheckBox fx:id="checkDiscovery" layoutX="15.0" layoutY="15.0" mnemonicParsing="false" text="Discovery Service" />
+            <CheckBox fx:id="checkAuth" mnemonicParsing="false" text="Security Service" />
+            <CheckBox fx:id="checkUsermanagement" layoutX="15.0" layoutY="33.0" mnemonicParsing="false" text="User Management Service" />
+            <CheckBox fx:id="checkResource" layoutX="15.0" layoutY="71.0" mnemonicParsing="false" text="Resource Service" />
              <CheckBox fx:id="checkServiceTemplate" layoutX="15.0" layoutY="71.0" mnemonicParsing="false" text="Service Template" />
          </children>
          <GridPane.margin>
@@ -138,9 +125,9 @@
          <GridPane.margin>
             <Insets />
          </GridPane.margin></VBox>
-      <ImageView fx:id="imgDiagram" fitHeight="189.0" fitWidth="302.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <ImageView fx:id="imgDiagram" fitWidth="300.0" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="15.0" prefWidth="391.0" text="Maven Information" />
-      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="15.0" prefWidth="300.0" text="MSA Components" GridPane.columnIndex="1" />
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="15.0" prefWidth="300.0" text="Infrastructure and Functional Services" GridPane.columnIndex="1" />
 
    </children>
 </GridPane>
