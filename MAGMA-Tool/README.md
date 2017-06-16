@@ -1,5 +1,5 @@
 # MAGMA-Tool
-This repository contains the MAGMA-Too.
+This repository contains the MAGMA-Tool.
 
 ## Getting started
 1. Requirements for using the MAGMA-Tool</br>
