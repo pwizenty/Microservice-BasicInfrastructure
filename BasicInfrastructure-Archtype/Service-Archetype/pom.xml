@@ -1,22 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>Infrastruktur</groupId>
-  <artifactId>Service-Archetype</artifactId>
-  <version>1.4.2.RELEASE</version>
-  <packaging>maven-archetype</packaging>
+    <groupId>com.github.pwizenty</groupId>
+    <artifactId>servicetemplate</artifactId>
+    <version>1.4.2.RELEASE</version>
+    <packaging>maven-archetype</packaging>
 
-  <name>demoservice-archetype</name>
+    <name>Service Template Archtype</name>
+    <description>Maven Archtypes for Service Templates</description>
+    <url>https://github.com/pwizenty/Microservice-BasicInfrastructure</url>
+    
+    <scm>
+        <url>https://svn.apache.org/viewvc/maven</url>
+    </scm>
 
-  <build>
-    <extensions>
-      <extension>
-        <groupId>org.apache.maven.archetype</groupId>
-        <artifactId>archetype-packaging</artifactId>
-        <version>2.4</version>
-      </extension>
-    </extensions>
-  </build>
+   <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+    <developers>
+        <developer>
+            <id>pwizenty</id>
+            <name>Philip WIzenty</name>
+            <email>philipnils.wizenty@fh-dortmund.de</email>
+        </developer>
+</developers>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.archetype</groupId>
+                <artifactId>archetype-packaging</artifactId>
+                <version>2.4</version>
+            </extension>
+        </extensions>
+    </build>
 
 </project>

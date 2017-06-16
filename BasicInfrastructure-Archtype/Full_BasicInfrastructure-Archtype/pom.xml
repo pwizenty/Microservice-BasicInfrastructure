@@ -2,12 +2,34 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>Infrastruktur</groupId>
-  <artifactId>Basiskomponenten-archetype</artifactId>
+  <groupId>com.github.pwizenty</groupId>
+  <artifactId>fullinfrastructure</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
-  <name>Basiskomponenten-archetype</name>
+  <name>Full Basicinfrastructure Archtype</name>
+  <description>Maven Archtypes for Service Templates</description>
+  <url>https://github.com/pwizenty/Microservice-BasicInfrastructure</url>
+
+  <scm>
+    <url>https://svn.apache.org/viewvc/maven</url>
+  </scm>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>pwizenty</id>
+      <name>Philip WIzenty</name>
+      <email>philipnils.wizenty@fh-dortmund.de</email>
+    </developer>
+  </developers>
 
   <build>
     <extensions>
