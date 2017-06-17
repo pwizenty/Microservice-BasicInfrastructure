@@ -172,44 +172,6 @@
         </fileSet>
       </fileSets>
     </module>
-    <module id="turbineserver" dir="turbineserver" name="turbineserver">
-      <fileSets>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory>src/main/java</directory>
-          <includes>
-            <include>**/*.java</include>
-          </includes>
-        </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory>src/main/wro</directory>
-          <includes>
-            <include>**/*.xml</include>
-            <include>**/*.properties</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory>src/main/wro</directory>
-          <includes>
-            <include>**/*.less</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory>src/main/resources</directory>
-          <includes>
-            <include>**/*.jks</include>
-            <include>**/*.yml</include>
-            <include>**/*.ftl</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory></directory>
-          <includes>
-            <include>turbineserver.iml</include>
-            <include>Dockerfile</include>
-          </includes>
-        </fileSet>
-      </fileSets>
-    </module>
   </modules>
 
   <requiredProperties>

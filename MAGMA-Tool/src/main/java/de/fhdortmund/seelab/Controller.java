@@ -127,14 +127,13 @@ public class Controller {
         properties.setProperty("groupId", txtGroupId.getText());
         properties.setProperty("artifactId", txtartifactId.getText());
         properties.setProperty("version", "1");
-        properties.setProperty("archetypeGroupId", "Infrastruktur");
-        properties.setProperty("CertPublicKey", txtPublicKey.getText());
+        properties.setProperty("archetypeGroupId", "com.github.pwizenty");
         properties.setProperty("package", txtPackage.getText());
-
         String archetype;
 
         if(checkServiceTemplate.isSelected()) {
-            archetype = "Service-Archetype";
+            archetype = "servicetemplate";
+
         }else {
 
             properties.setProperty("CertKeyPair", txtKeyPair.getText());
@@ -143,13 +142,13 @@ public class Controller {
 
             //Select archetype
             if (checkResource.isSelected()) {
-                archetype = "Basiskomponenten-archetype";
+                archetype = "fullinfrastructure";
             } else if (checkUsermanagement.isSelected()) {
-                archetype = "GW_Auth_SD_UM-BasicInfrastructure-Archtype";
+                archetype = "basicinfrastructureandusermanagement";
             } else if (checkDiscovery.isSelected()) {
-                archetype = "GW_Auth_SD_BasicInfrastructure-Archtype";
+                archetype = "gatewayauthenticationanddiscovery";
             } else if (checkAuth.isSelected()) {
-                archetype = "GW_Auth-Infrastructure-archetype";
+                archetype = "apigatewayandauthentication";
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Build failed");
@@ -161,7 +160,13 @@ public class Controller {
         }
 
         System.out.println(archetype);
-
+        if (archetype.equals("servicetemplate")){
+            properties.setProperty("archetypeVersion", "1.4.2.RELEASE");
+            properties.setProperty("publicKey", txtPublicKey.getText());
+        }else {
+            properties.setProperty("archetypeVersion", "1.0.0.RELEASE");
+            properties.setProperty("CertPublicKey", txtPublicKey.getText());
+        }
         properties.setProperty("archetypeArtifactId", archetype);
 
         request.setProperties(properties);

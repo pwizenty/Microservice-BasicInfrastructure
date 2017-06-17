@@ -22,7 +22,6 @@ import java.util.logging.Logger;
 @RestController
 @EnableResourceServer
 @EnableEurekaClient
-@EnableGlobalMethodSecurity(prePostEnabled = true)
 @EnableCircuitBreaker
 public class ResourceApplication {
     static Logger logger = Logger.getLogger(ResourceApplication.class.getName());

@@ -36,6 +36,6 @@ security:
       jwt:
         keyValue: |
           -----BEGIN PUBLIC KEY-----
-          ${publicKey}
+          ${CertPublicKey}
           -----END PUBLIC KEY-----
 

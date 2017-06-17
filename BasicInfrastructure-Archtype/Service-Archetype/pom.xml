@@ -4,7 +4,7 @@
 
     <groupId>com.github.pwizenty</groupId>
     <artifactId>servicetemplate</artifactId>
-    <version>1.4.2.RELEASE</version>
+    <version>1.0.0.RELEASE</version>
     <packaging>maven-archetype</packaging>
 
     <name>Service Template Archtype</name>

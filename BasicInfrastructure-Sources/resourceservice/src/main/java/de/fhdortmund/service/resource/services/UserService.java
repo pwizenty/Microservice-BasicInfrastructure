@@ -31,10 +31,16 @@ public class UserService {
     public User getUserByUsername(String username) {
         URI uri = URI.create("http://localhost:9090/get-by-username?username=" + username );
         User user = restTemplate.getForObject(uri, User.class);
-        return user;
+        System.out.println("User Found!");
+        if (user == null){
+            throw new RuntimeException("Simulating downstream system failure");
+        }
+        return restTemplate.getForObject(uri, User.class);
     }
 
+
     public User reliable(String username) {
+        System.out.println("Reliable");
         return new User("Email", "Surname", "Firstname", "username", "password");
     }
 }

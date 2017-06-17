@@ -28,7 +28,7 @@
   </fileSets>
 
   <requiredProperties>
-    <requiredProperty key="publicKey"/>
+    <requiredProperty key="CertPublicKey"/>
   </requiredProperties>
 
 </archetype-descriptor>
