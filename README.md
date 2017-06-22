@@ -25,4 +25,4 @@ that aims at accelerating the development of Microservice architectures by gener
 <p>This component contains the source code of the MAGMA tool. The MAGMA tool is a Java-based software that allows the user to use the Microservice arch types via a graphical user interface.</p>
 <p>A tutorial for the MAGMA tool can be found in the following Youtube video:</p>
 
-Youtube-Video: <a href="https://oss.sonatype.org/content/groups/staging/com/github/pwizenty/" title="Sonatype">youtube_MAGMA-Tool</a>
+Youtube-Video: <a href="https://youtu.be/PmvSKZvJtMQ" title="Youtube">youtube_MAGMA-Tool</a>
