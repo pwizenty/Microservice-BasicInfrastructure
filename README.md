@@ -7,15 +7,15 @@ structured in four different components.</p>
 <p>
 This project deals with the generation of invariant structures for Microservice 
 Systems. The MAGMA tool was developed to generate this. MAGMA, a tool based on the Maven build management system
-that aims at accelerating the development of Microservice architectures by generating pre-congured, runnable systems. 
+that aims at accelerating the development of Microservice architectures by generating pre-configured, runnable systems. 
 </p>
 
 <h2>Repository Components
 <h3>Microservice Maven-Archtypes</h3>
 <p>This repository contains all Maven Archtypes, which are used by the MAGMA tool and are made available via Maven Centrel and Sonatype repositories.</p>
 
-Maven Central Repository: <a href="https://repo1.maven.org/maven2/com/github/pwizenty/" title="Maven Central">maven_pwizenty</a>
-Sonatype: <a href="https://oss.sonatype.org/content/groups/staging/com/github/pwizenty/" title="Sonatype">sonatype_pwizenty</a>
+<p>Maven Central Repository: <a href="https://repo1.maven.org/maven2/com/github/pwizenty/" title="Maven Central">maven_pwizenty</a></p>
+<p>Sonatype: <a href="https://oss.sonatype.org/content/groups/staging/com/github/pwizenty/" title="Sonatype">sonatype_pwizenty</a></p>
 
  
 <h3>BasicInfrastructure-Sources</h3>
