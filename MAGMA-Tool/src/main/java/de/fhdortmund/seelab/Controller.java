@@ -162,10 +162,12 @@ public class Controller {
         System.out.println(archetype);
         if (archetype.equals("servicetemplate")){
             properties.setProperty("archetypeVersion", "1.4.2.RELEASE");
-            properties.setProperty("publicKey", txtPublicKey.getText());
+            properties.setProperty("CertPublicKey", txtPublicKey.getText());
         }else {
             properties.setProperty("archetypeVersion", "1.0.0.RELEASE");
             properties.setProperty("CertPublicKey", txtPublicKey.getText());
+
+
         }
         properties.setProperty("archetypeArtifactId", archetype);
 
