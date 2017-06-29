@@ -161,11 +161,11 @@ public class Controller {
 
         System.out.println(archetype);
         if (archetype.equals("servicetemplate")){
-            properties.setProperty("archetypeVersion", "1.4.2.RELEASE");
+            properties.setProperty("archetypeVersion", "1.0.1.RELEASE");
             properties.setProperty("CertPublicKey", txtPublicKey.getText());
             properties.setProperty("publicKey", txtPublicKey.getText());
         }else {
-            properties.setProperty("archetypeVersion", "1.0.0.RELEASE");
+            properties.setProperty("archetypeVersion", "1.0.1.RELEASE");
             properties.setProperty("CertPublicKey", txtPublicKey.getText());
             properties.setProperty("publicKey", txtPublicKey.getText());
 

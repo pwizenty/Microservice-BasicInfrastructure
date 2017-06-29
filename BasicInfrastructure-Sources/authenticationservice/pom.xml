@@ -85,7 +85,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <start-class>demo.AuthserverApplication</start-class>
+        <start-class>de.fhdortmund.service.authentication.AuthenticationApplication</start-class>
         <wro4j.version>1.8.0</wro4j.version>
         <java.version>1.8</java.version>
     </properties>

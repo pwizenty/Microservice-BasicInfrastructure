@@ -4,9 +4,8 @@
 
     <groupId>com.github.pwizenty</groupId>
     <artifactId>servicetemplate</artifactId>
-    <version>1.0.0.RELEASE</version>
+    <version>1.0.1.RELEASE</version>
     <packaging>maven-archetype</packaging>
-
     <name>Service Template Archtype</name>
     <description>Maven Archtypes for Service Templates</description>
     <url>https://github.com/pwizenty/Microservice-BasicInfrastructure</url>

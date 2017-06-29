@@ -4,7 +4,7 @@
 
   <groupId>com.github.pwizenty</groupId>
   <artifactId>apigatewayandauthentication</artifactId>
-  <version>1.0.0.RELEASE</version>
+  <version>1.0.1.RELEASE</version>
   <packaging>maven-archetype</packaging>
 
   <name>API Gateway and Authentication Sevices</name>
